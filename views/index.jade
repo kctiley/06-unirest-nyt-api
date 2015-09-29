@@ -2,4 +2,26 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to top books list
+  table
+    thead
+      tr
+        td
+          h2 Rank: 
+        td
+          h2 Title:
+        td
+          h2 Author:
+        td
+          h2 Description:
+
+      for book in books
+        tr
+          td= book.rank
+          td= book.title
+          td= book.author
+          td= book.description
+
+
+
+      
